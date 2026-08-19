@@ -1,12 +1,12 @@
 import { Routes, Route, Link } from 'react-router-dom'
 
 import './App.css'
-import Home from './Pages/home'
-import About from './Pages/about'
-import Work from './Pages/work'
-import Services from './Pages/services'
-import Blog from './Pages/blog'
-import Contact from './Pages/contact'
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Work from './Pages/Work'
+import Services from './Pages/Services'
+import Blog from './Pages/Blog'
+import Contact from './Pages/Contact'
 import Navbar from './Components/Navbar'
 
 function App() {
