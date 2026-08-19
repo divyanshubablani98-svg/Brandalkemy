@@ -8,21 +8,23 @@ import Services from './Pages/Services'
 import Blog from './Pages/Blog'
 import Contact from './Pages/Contact'
 import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
 
 function App() {
   return (
     <>
-<Navbar />
-
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About/>} />
+        <Route path="/about" element={<About />} />
         <Route path="/work" element={<Work />} />
         <Route path="/services" element={<Services />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
+      <Footer />
     </>
   )
 }
