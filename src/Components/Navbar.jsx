@@ -1,43 +1,24 @@
 import { Link, NavLink } from 'react-router-dom'
+import logo from '../assets/logo.png'
 
 function Navbar() {
   return (
     <nav className="navbar">
       <Link to="/" className="navbar-logo">
-        Brandalkemy
+        <img src={logo} alt="Brandalkemy" className="logo-mark" />
+        <span>Brandalkemy</span>
       </Link>
-
       <ul className="navbar-links">
-        <li>
-          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : ''}>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/work" className={({ isActive }) => isActive ? 'active' : ''}>
-            Work
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/services" className={({ isActive }) => isActive ? 'active' : ''}>
-            Services
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/blog" className={({ isActive }) => isActive ? 'active' : ''}>
-            Blog
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact" className={({ isActive }) => isActive ? 'active' : ''}>
-            Contact
-          </NavLink>
-        </li>
+        {['/', '/about', '/work', '/services', '/blog', '/contact'].map((path, i) => {
+          const labels = ['Home', 'About', 'Work', 'Services', 'Blog', 'Contact']
+          return (
+            <li key={path}>
+              <NavLink to={path} end={path === '/'} className={({ isActive }) => isActive ? 'active' : ''}>
+                {labels[i]}
+              </NavLink>
+            </li>
+          )
+        })}
       </ul>
     </nav>
   )

@@ -235,5 +235,84 @@
   &::after {
     right: 0;
     border-right-color: var(--border);
-  }
+  }.navbar-logo { display: flex; align-items: center; gap: 0.6rem; }
+.logo-mark { height: 32px; width: auto; }
+}#process, #about-values {
+  background: var(--onyx);
+  color: var(--white);
+  padding: 5rem 2rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+#process h2, #about-values h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+.values-copy {
+  max-width: 60ch;
+  color: #d9d9d7;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}#services-grid {
+  background: var(--onyx);
+  padding: 3rem 2rem 5rem;
+}#work-grid { background: var(--onyx); padding: 3rem 2rem 5rem; }
+.work-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.work-card {
+  border: 1px solid var(--amethyst);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.work-card:hover { border-color: var(--amber); transform: translateY(-4px); }
+.work-thumb {
+  height: 160px;
+  background: linear-gradient(135deg, var(--amethyst), var(--onyx));
+}
+.work-category {
+  display: block;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--amber);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 1rem 1rem 0;
+}
+.work-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--white);
+  padding: 0.5rem 1rem 1.25rem;
+}
+.work-cta { text-align: center; margin-top: 3rem; }
+#blog-list {
+  background: var(--onyx);
+  padding: 3rem 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 700px;
+}
+.blog-post {
+  border-bottom: 1px solid var(--amethyst);
+  padding-bottom: 1.5rem;
+}
+.blog-tag {
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--amber);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+.blog-post h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--white);
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0.25rem;
+}
+.blog-date { color: #8a8a88; font-size: 0.85rem; }
+#contact-section {
+  background: var(--onyx);
+  padding: 1rem 2rem 5rem;
 }

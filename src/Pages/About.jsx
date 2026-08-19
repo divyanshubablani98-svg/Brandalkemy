@@ -1,76 +1,45 @@
-import viteLogo from '../assets/vite.svg'
-import reactLogo from '../assets/react.svg'
+import Header from '../Components/Header'
+
+const steps = [
+  { number: '01', symbol: 'Ds', name: 'Discover', desc: 'We study the market, the audience, and what your brand actually stands for.' },
+  { number: '02', symbol: 'Di', name: 'Distill', desc: 'Strategy gets reduced to the core message — no fluff, no filler.' },
+  { number: '03', symbol: 'Fm', name: 'Form', desc: 'Design and content take shape around that strategy, sector by sector.' },
+  { number: '04', symbol: 'Rn', name: 'Run', desc: 'Campaigns launch, get measured, and get refined until they compound.' },
+]
 
 function About() {
   return (
     <>
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg className="button-icon" role="presentation" aria-hidden="true">
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+      <Header
+        eyebrow="About Brandalkemy"
+        title="Marketing, treated like a formula."
+        subtitle="We believe every brand is a set of raw elements — audience, offer, voice — waiting to be combined the right way. Our job is finding that combination."
+      />
+
+      <section id="process">
+        <p className="section-label">The Formula</p>
+        <h2>How we work</h2>
+        <div className="element-grid">
+          {steps.map((s) => (
+            <div className="element-tile" key={s.symbol}>
+              <span className="element-number">{s.number}</span>
+              <span className="element-symbol">{s.symbol}</span>
+              <h3>{s.name}</h3>
+              <p>{s.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <section id="about-values">
+        <p className="section-label">What We Believe</p>
+        <h2>Three sectors, one standard</h2>
+        <p className="values-copy">
+          We focus deliberately on Healthcare, Hospitality, and Employer Branding —
+          three sectors where trust, experience, and perception decide everything.
+          Specializing lets us go deeper than a generalist agency ever could.
+        </p>
+      </section>
     </>
   )
 }
