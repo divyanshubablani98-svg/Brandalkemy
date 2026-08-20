@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
-import logo from '../assets/Logo.png'
+import logo from '../assets/logo.png'
 
 function Navbar() {
   return (
@@ -8,6 +8,7 @@ function Navbar() {
         <img src={logo} alt="Brandalkemy" className="logo-mark" />
         <span>Brandalkemy</span>
       </Link>
+
       <ul className="navbar-links">
         {['/', '/about', '/work', '/services', '/blog', '/contact'].map((path, i) => {
           const labels = ['Home', 'About', 'Work', 'Services', 'Blog', 'Contact']
@@ -20,6 +21,8 @@ function Navbar() {
           )
         })}
       </ul>
+
+      <Link to="/contact" className="navbar-cta">Start a project</Link>
     </nav>
   )
 }
