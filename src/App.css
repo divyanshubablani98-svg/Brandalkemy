@@ -406,3 +406,87 @@ a { color: inherit; }
 .blog-tag { font-family: 'IBM Plex Mono', monospace; color: var(--amber); font-size: 0.75rem; text-transform: uppercase; }
 .blog-post h3 { font-family: 'Space Grotesk', sans-serif; color: var(--white); font-size: 1.3rem; margin: 0.5rem 0 0.25rem; }
 .blog-date { color: #8a8a88; font-size: 0.85rem; }
+/* ===== SERVICES CAROUSEL ===== */
+#services-carousel {
+  background: var(--onyx);
+  padding: 2rem 2rem 5rem;
+}
+
+.services-page-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .services-page-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .services-page-grid { grid-template-columns: 1fr; }
+}
+
+.element-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.element-top-row .element-number {
+  position: static;
+}
+
+.element-category {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: #a8a8a6;
+}
+
+.element-symbol {
+  margin: 0 0 0.5rem;
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.carousel-arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #3a3a38;
+  background: transparent;
+  color: var(--white);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3a3a38;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dot-active {
+  background: var(--amber);
+}
