@@ -92,9 +92,9 @@ export default function Footer() {
                 <Twitter className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/brandalkemy/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg bg-onyx-light border border-onyx-border flex items-center justify-center text-neutral-300 hover:text-amber hover:border-amber transition-colors"
                 aria-label="BrandAlkemy on Instagram"
               >
