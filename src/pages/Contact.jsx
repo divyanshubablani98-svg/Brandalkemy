@@ -444,7 +444,7 @@ export default function Contact() {
                     <div>
                       <span className="text-xs text-neutral-400 block font-mono">Visit Us:</span>
                       <span className="text-white font-medium block leading-relaxed">
-                        1/234 Housing Board Colony, In front of Community Hall, Pratap Nagar, Udaipur
+                        1/234 Housing Board Colony, Backside of Community Hall, Pratap Nagar, Udaipur, 313001
                       </span>
                     </div>
                   </div>

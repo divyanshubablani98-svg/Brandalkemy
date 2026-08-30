@@ -182,7 +182,7 @@ export default function Footer() {
                 <div>
                   <span className="block text-neutral-400 font-mono">Visit Us:</span>
                   <span className="text-white leading-relaxed block">
-                    1/234 Housing Board Colony, In front of Community Hall, Pratap Nagar, Udaipur
+                    1/234 Housing Board Colony, Backside of Community Hall, Pratap Nagar, Udaipur, 313001
                   </span>
                 </div>
               </div>
