@@ -29,7 +29,6 @@ export default function Contact() {
     phone: '',
     website: '',
     serviceRequired: prefilledService || '',
-    budgetRange: '',
     message: '',
   });
 
@@ -43,15 +42,6 @@ export default function Contact() {
       setFormData((prev) => ({ ...prev, serviceRequired: prefilledService }));
     }
   }, [prefilledService]);
-
-  const budgetOptions = [
-    'Select estimated monthly budget',
-    '$5,000 - $10,000 / month',
-    '$10,000 - $25,000 / month',
-    '$25,000 - $50,000 / month',
-    '$50,000+ / month',
-    'Custom Project / Enterprise Scope',
-  ];
 
   const validateForm = () => {
     const newErrors = {};
@@ -182,7 +172,6 @@ export default function Contact() {
                           phone: '',
                           website: '',
                           serviceRequired: '',
-                          budgetRange: '',
                           message: '',
                         });
                       }}
@@ -304,53 +293,33 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Service Required Dropdown & Budget Range */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-xs font-poppins font-semibold uppercase tracking-wider text-neutral-300 mb-2">
-                        Service Required <span className="text-amber">*</span>
-                      </label>
-                      <select
-                        name="serviceRequired"
-                        value={formData.serviceRequired}
-                        onChange={handleChange}
-                        className={`w-full px-4 py-3 rounded-lg bg-onyx-dark border text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber transition-colors ${
-                          errors.serviceRequired ? 'border-red-500 ring-1 ring-red-500' : 'border-onyx-border focus:border-amber'
-                        }`}
-                      >
-                        <option value="">Select primary service</option>
-                        {servicesData.map((svc) => (
-                          <option key={svc.id} value={svc.title}>
-                            {svc.title}
-                          </option>
-                        ))}
-                        <option value="Full Omnichannel Growth Retainer">Full Omnichannel Growth Retainer</option>
-                      </select>
-                      {errors.serviceRequired && (
-                        <p className="text-red-400 text-xs mt-1.5 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
-                          <span>{errors.serviceRequired}</span>
-                        </p>
-                      )}
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-poppins font-semibold uppercase tracking-wider text-neutral-300 mb-2">
-                        Estimated Budget Range
-                      </label>
-                      <select
-                        name="budgetRange"
-                        value={formData.budgetRange}
-                        onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg bg-onyx-dark border border-onyx-border focus:border-amber text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber transition-colors"
-                      >
-                        {budgetOptions.map((opt, i) => (
-                          <option key={i} value={i === 0 ? '' : opt}>
-                            {opt}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
+                  {/* Service Required */}
+                  <div>
+                    <label className="block text-xs font-poppins font-semibold uppercase tracking-wider text-neutral-300 mb-2">
+                      Service Required <span className="text-amber">*</span>
+                    </label>
+                    <select
+                      name="serviceRequired"
+                      value={formData.serviceRequired}
+                      onChange={handleChange}
+                      className={`w-full px-4 py-3 rounded-lg bg-onyx-dark border text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber transition-colors ${
+                        errors.serviceRequired ? 'border-red-500 ring-1 ring-red-500' : 'border-onyx-border focus:border-amber'
+                      }`}
+                    >
+                      <option value="">Select primary service</option>
+                      {servicesData.map((svc) => (
+                        <option key={svc.id} value={svc.title}>
+                          {svc.title}
+                        </option>
+                      ))}
+                      <option value="Full Omnichannel Growth Retainer">Full Omnichannel Growth Retainer</option>
+                    </select>
+                    {errors.serviceRequired && (
+                      <p className="text-red-400 text-xs mt-1.5 flex items-center gap-1">
+                        <AlertCircle className="w-3 h-3" />
+                        <span>{errors.serviceRequired}</span>
+                      </p>
+                    )}
                   </div>
 
                   {/* Message */}
